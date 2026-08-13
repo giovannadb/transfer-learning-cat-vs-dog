@@ -19,6 +19,8 @@ Em vez de treinar uma rede do zero onde exige muito mais dados e poder computaci
 - **Transfer Learning** — aproveitamento de modelos pré-treinados
 - **NumPy** — manipulação de arrays e dados numéricos
 - **Matplotlib** — visualização de imagens e curvas de aprendizado
+- **Seaborn** — visualização de gráficos estatísticos
+- **Sklearn** — análises estatísticas
 - **Jupyter Notebook** — ambiente de desenvolvimento 
 
 ---
@@ -32,11 +34,10 @@ Em vez de treinar uma rede do zero onde exige muito mais dados e poder computaci
 2. **Pré-processamento das imagens**
    - Redimensionamento para o formato esperado pelo modelo base
    - Normalização dos pixels
-   - Aplicação de Data Augmentation para aumentar a variabilidade dos dados de treino
 
 3. **Construção do modelo com Transfer Learning**
    - Carregamento de uma rede pré-treinada (base convolucional)
-   - Congelamento das camadas base (`freeze`)
+   - Congelamento das camadas base
    - Adição de camadas densas customizadas para a classificação binária
 
 4. **Treinamento e validação**
@@ -53,19 +54,9 @@ Em vez de treinar uma rede do zero onde exige muito mais dados e poder computaci
 
 - Modelos poderosos já existem e podem ser adaptados de forma eficiente para novos problemas.
 
-- Dedicar tempo ao tratamento das imagens (redimensionamento, normalização, augmentation) impacta diretamente no desempenho do modelo.
-
-- Quando o dataset é relativamente pequeno, técnicas como flip horizontal, zoom e rotação ajudam o modelo a generalizar melhor e evitar overfitting.
+- Dedicar tempo ao tratamento das imagens (redimensionamento, normalização) impacta diretamente no desempenho do modelo.
 
 - A interpretar os gráficos de `loss` e `accuracy` para identificar se o modelo está sofrendo de overfitting, underfitting ou se está aprendendo de forma saudável.
-
----
-
-##  Dificuldades Encontradas
-
-- O modelo aprendia muito bem no treino, mas ia mal na validação. Resolver isso com Data Augmentation e Dropout me fez entender na prática por que essas técnicas existem.
-
-- Carregar todas as imagens de uma vez gerava problemas de memória. Aprender a usar geradores de dados (`ImageDataGenerator` ou `tf.data`) foi importante.
 
 ---
 
