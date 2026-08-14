@@ -8,7 +8,7 @@
 
 Este projeto tem como objetivo construir um classificador de imagens capaz de distinguir entre **gatos e cachorros**, utilizando a técnica de **Transfer Learning** com redes neurais convolucionais (CNNs) pré-treinadas.
 
-Em vez de treinar uma rede do zero onde exige muito mais dados e poder computacional, aproveitei modelos já treinados em grandes datasets (como o ImageNet) e os adaptei para classificação binária.
+Ao invés de treinar uma rede do zero onde exige muito mais dados e poder computacional, aproveitei modelos já treinados em grandes datasets (como o ImageNet) e os adaptei para classificação binária.
 
 ---
 
